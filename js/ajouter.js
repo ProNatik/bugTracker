@@ -9,10 +9,15 @@ let description = '';
 
 const handlesubmit = (e) => {
     e.preventDefault();
-    addBug(token, id,)
-        .then(data => {
-            
-            document.location.href = '/views/liste.html';
-        })
-        .catch(error => console.error(error.message));
+    addBug(token, id, title, description);
+    alert('Bug ajouté');
 }
+
+document.getElementById('titre').addEventListener('change', function(e){
+    title = e.target.value;
+});
+document.getElementById('description').addEventListener('change', function(e){
+    description = e.target.value;
+});
+
+document.getElementById('formulaire').addEventListener('submit', handlesubmit);

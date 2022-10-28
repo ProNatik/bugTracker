@@ -4,6 +4,12 @@ export async function login(pseudo, password) {
     const { data } = await instance.get(`/login/${pseudo}/${password}`);
     return data;
 }
+
+export async function logout(token) {
+    const { data } = await instance.get(`logout/${token}`);
+    return data
+}
+
 export async function signup(pseudo, password) {
     const { data } = await instance.get(`/signup/${pseudo}/${password}`);
     return data;
