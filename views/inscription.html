@@ -10,18 +10,36 @@
     <script src="../js/inscription.js" type="module" defer></script>
 </head>
 <body>
-    <div>
-        <h1>Bug Tracker</h1>
-        <form id="formulaire">
-            <div>
-                <input type="text" name="" id="pseudo" placeholder="Pseudo" />
-                <input type="password" name="" id="password" placeholder="Password" />
-                <input type="password" name="" id="repassword" placeholder="Retapez le password" />
+    <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div class="w-full max-w-md space-y-8">
+          <div>
+            <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Inscription</h2>
+          </div>
+          <form class="mt-8 space-y-6" id="formulaire">
+            <input type="hidden" name="remember" value="true">
+            <div class="-space-y-px rounded-md shadow-sm">
+              <div>
+                <label for="pseudo" class="sr-only">Pseudo</label>
+                <input id="pseudo" name="pseudo" type="text" required class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Pseudo">
+              </div>
+              <div>
+                <label for="password" class="sr-only">Password</label>
+                <input id="password" name="password" type="password" autocomplete="current-password" required class="relative block w-full appearance-none rounded-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Password">
+              </div>
+              <div>
+                <label for="repassword" class="sr-only">Repassword</label>
+                <input id="repassword" name="repassword" type="password" autocomplete="current-password" required class="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Retapez le password">
+              </div>
             </div>
-            <input type="submit" />
-        </form>
-        <a href="/index.html">Se connecter</a>
-    </div>
+      
+            <div>
+              <input type="submit" class="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" value="Sign in" />  
+              <a href="/index.html" class="relative flex w-full justify-center font-medium text-indigo-600 hover:text-indigo-500" style="margin-top: 5px;">Connexion</a>
+            </div>
+            
+          </form>
+        </div>
+      </div>
 </body>
 <script src="https://cdn.tailwindcss.com"></script>
 </html>
